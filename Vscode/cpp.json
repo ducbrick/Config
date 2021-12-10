@@ -35,6 +35,15 @@
 		"description": "Forward for loop"
 	},
 
+	"Forward for without brackets":{
+		"prefix": "forward",
+		"body": [
+			"for(auto $1 = $2; $1 <= $3; $1++)",
+			"\t$0"
+		],
+		"description": "Forward for loop without brackets"
+	},
+
 	"Reversed for":{
 		"prefix": "reverse",
 		"body": [
@@ -43,6 +52,15 @@
 			"}"
 		],
 		"description": "Reversed for loop"
+	},
+
+	"Reversed for without brackets":{
+		"prefix": "reverse",
+		"body": [
+			"for(auto $1 = $2; $1 >= $3; $1--)",
+			"\t$0"
+		],
+		"description": "Reversed for loop without brackets"
 	},
 
 	"For cin":{
@@ -54,6 +72,25 @@
 			"}"
 		],
 		"description": "For cin"
+	},
+
+	"For each":{
+		"prefix": "for each",
+		"body": [
+			"for(auto $1: $2){",
+			"\t$0",
+			"}"
+		],
+		"description": "For each"
+	},
+
+	"For each without brackets":{
+		"prefix": "for each",
+		"body": [
+			"for(auto $1: $2)",
+			"\t$0",
+		],
+		"description": "For each without brackets"
 	},
 
 	"Start up":{
@@ -80,6 +117,6 @@
 			"freopen(\"$1.out\", \"w\", stdout);",
 			"$0"
 		],
-		"description": "Reversed for loop"
+		"description": "Freopen"
 	},
 }
